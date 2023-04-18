@@ -179,7 +179,7 @@ class GameOfLife {
         }
       }
     }
-        //I was suggested to make this optimize feature here but in my testing it doesn't seem to have a noticeable effect on the performance. I will still leave it here though!
+        //This help optimizing the programm!
 if (optimize) {
       if (population == 0) {
         this.board[y][x].tempState = this.board[y][x].state;
@@ -289,3 +289,5 @@ function findIndex(x, y, width, height) {
   }
   return [xpos, ypos];
 }
+
+//go test it here: https://editor.p5js.org/Rob-squarerootofminus1-n/sketches/SzH3HXqLL 
