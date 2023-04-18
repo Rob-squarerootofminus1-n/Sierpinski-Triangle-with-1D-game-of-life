@@ -19,7 +19,7 @@ function setup() {
 }
 
 function draw() {
-  background(10);
+  background(5);
   translate(width / 2, height / 2);
   w.addCell();
   if (play == 1) {
@@ -34,9 +34,9 @@ function draw() {
   w.show();
 
   if (play == 0) {
-    stroke(0, 100, 100, 1);
+    stroke(0,100, 100);
   } else {
-    stroke(100, 100, 100, 1);
+    stroke(100, 100, 100);
   }
   strokeWeight(20);
   point(0, -height / 2 + 20);
@@ -139,9 +139,9 @@ class GameOfLife {
   show() {
     push();
     noStroke();
-    fill(50);
+    fill(89, 89, 34);
     rect(0, 0, this.scl * this.res + 20, this.scl * this.res + 20);
-    fill(16);
+    fill(22,52,40); //62,12,90
     rect(0, 0, this.scl * this.res + 15, this.scl * this.res + 15);
     pop();
     for (let y = 0; y < this.res; y++) {
@@ -180,7 +180,7 @@ class GameOfLife {
       }
     }
         //I was suggested to make this optimize feature here but in my testing it doesn't seem to have a noticeable effect on the performance. I will still leave it here though!
-    if (optimize) {
+if (optimize) {
       if (population == 0) {
         this.board[y][x].tempState = this.board[y][x].state;
         return;
@@ -233,7 +233,7 @@ class Cell {
         let b = 0.9;
         push();
         noStroke();
-        fill(0, 0, 0, 1);
+        fill(205,181,205);
         rect(
           (this.x + 0.5) * this.scl + this.ox,
           (this.y + 0.5) * this.scl + this.oy,
